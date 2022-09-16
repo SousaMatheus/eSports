@@ -1,33 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StatusBar } from 'react-native';
+import {
+  useFonts,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_900Black
+} from'@expo-google-fonts/inter';
+
+import { Home } from './src/screens/home';
+import { Background } from './src/Componentes/Background';
+import { Loading } from './src/Componentes/Loading';
 
 export default function App() {
+  const [fonstAreLoeaded] =useFonts({
+    Inter_400Regular,
+    Inter_600SemiBold,
+    Inter_700Bold,
+    Inter_900Black
+  })
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <Button titulo='Enviar 1'></Button>
-      <StatusBar style="auto" />
-    </View>
+    <Background>
+      <StatusBar
+      barStyle ="light-content"
+      backgroundColor = "transparent"
+      translucent
+      />
+      {fonstAreLoeaded ? <Home/> : <Loading/>}
+    </Background>
   );
-}
+};
 
-interface ButtonProps{
- titulo : string;
-}
-function Button(props : ButtonProps){
-  return (
-  <TouchableOpacity>
-    <Text>
-      {props.titulo}
-    </Text>
-  </TouchableOpacity>
-  );
-}         
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+//antes de importar pelo expo para a aplicacao
+//react native navigation - install react-native-safe-area-context
+//expo install expo-linear-gradient
