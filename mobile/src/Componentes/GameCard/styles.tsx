@@ -8,11 +8,11 @@ export const styles = StyleSheet.create({
   cover : {
     width : 240,
     height : 320,
-    alignContent : 'flex-end',
     borderRadius : 8,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    justifyContent : 'flex-end',
   },
-  footer : {
+   footer : {
     width : '100%',
     height : 102,
     padding : 16,
