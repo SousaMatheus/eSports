@@ -7,7 +7,7 @@ import {
   Inter_900Black
 } from'@expo-google-fonts/inter';
 
-import { Home } from './src/screens/home';
+import { Home } from './src/screens/Home';
 import { Background } from './src/Componentes/Background';
 import { Loading } from './src/Componentes/Loading';
 
