@@ -3,24 +3,26 @@
 ## Entidades
 
 ### Game
-id
-title
-bannerUrl
-CDN (Amazon S3)
+
+- id
+- title
+- bannerUrl
 
 ### Ad
-id
-gameId
-name
-yearsPlayng
-discord
-weekDays
-hourStart
-hourEnd
-useVoiceChannel
-createdAt
+
+- id
+- gameId
+- name
+- yearsPlayng
+- discord
+- weekDays
+- hourStart
+- hourEnd
+- useVoiceChannel
+- createdAt
 
 ## Caso de uso
+
 - Listagem de games com contagem de anúncios
 - Criação de novo anúncio
 - Listagem de anúncios por game
